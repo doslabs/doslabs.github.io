@@ -49,15 +49,38 @@ body::after {
   opacity: 0.15;
 }
 
+/* HEADER SOLA */
 header {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 80px 80px;
+  text-align: left;
 }
 
 header h1 {
   font-size: 60px;
+  margin: 0;
   color: #00ffcc;
   text-shadow: 0 0 20px #00ffcc;
+}
+
+/* Typing animasyon */
+.typing {
+  font-size: 18px;
+  margin-top: 15px;
+  border-right: 2px solid #00ffcc;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards,
+             blink 1s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 360px }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
 }
 
 .section {
@@ -112,7 +135,9 @@ footer {
 
 <header>
   <h1>DOSLabs</h1>
-  <p>> Sistem Deneyleri Başlatılıyor...</p>
+  <div class="typing">
+    > Sistem Deneyleri Başlatılıyor...
+  </div>
 </header>
 
 <div class="section">
@@ -124,8 +149,9 @@ footer {
   <h2>Aktif Projeler</h2>
 
   <div class="card-container">
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <img src="https://picsum.photos/600/400?tech" alt="">
       <div class="card-content">
         <h3>Windows Testleri</h3>
         <p>Donanım sınır performans analizleri.</p>
@@ -133,12 +159,13 @@ footer {
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1587202372775-9894b4b6d5f2">
+      <img src="https://picsum.photos/600/400?computer" alt="">
       <div class="card-content">
         <h3>Retro Donanım</h3>
         <p>Eski sistemlerin yeniden yapılandırılması.</p>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -148,4 +175,5 @@ footer {
 
 </body>
 </html>
+
 
