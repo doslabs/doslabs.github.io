@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puanlama / Feedback - DOSLabs</title>
+<style>
+body { background: black; color: #00ff99; font-family: Consolas, monospace; text-align:center; padding:50px; }
+input, textarea, button { display:block; margin: 15px auto; padding: 10px; width: 300px; border-radius:5px; border:none; font-family: Consolas, monospace; }
+button { cursor:pointer; background:#00ffcc; color:black; font-weight:bold; }
+.lang-btn { position: fixed; top: 20px; right: 30px; border: 1px solid #00ffcc; padding: 6px 14px; text-decoration: none; color: #00ffcc; transition: 0.3s; }
+.lang-btn:hover { background: #00ffcc; color: black; }
+</style>
+</head>
+<body>
+
+<h1>Puanlama / Geri Bildirim</h1>
+
+<!-- Dil butonları -->
+<a href="#" class="lang-btn" onclick="switchLang('tr')">TR</a>
+<a href="#" class="lang-btn" style="right:120px;" onclick="switchLang('en')">EN</a>
+
+<!-- TR Form -->
+<div id="tr-form">
+<form action="https://formsubmit.co/lgklimalar1@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Adınız" required>
+  <input type="number" name="rating" placeholder="Puan (1-5)" min="1" max="5" required>
+  <textarea name="comment" placeholder="Yorumunuz"></textarea>
+  <button type="submit">Gönder</button>
+</form>
+</div>
+
+<!-- EN Form -->
+<div id="en-form" style="display:none;">
+<form action="https://formsubmit.co/lgklimalar1@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+  <textarea name="comment" placeholder="Your Comment"></textarea>
+  <button type="submit">Send</button>
+</form>
+</div>
+
+<script>
+function switchLang(lang){
+  if(lang==='tr'){
+    document.getElementById('tr-form').style.display='block';
+    document.getElementById('en-form').style.display='none';
+  } else {
+    document.getElementById('tr-form').style.display='none';
+    document.getElementById('en-form').style.display='block';
+  }
+}
+</script>
+
+</body>
+</html>
