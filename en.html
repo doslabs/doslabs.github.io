@@ -7,142 +7,114 @@
 
 <style>
 * { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  background: black;
-  color: #00ff99;
-  font-family: Consolas, monospace;
-}
-
-.lang-btn {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  border: 1px solid #00ffcc;
-  padding: 6px 14px;
-  text-decoration: none;
-  color: #00ffcc;
-  transition: 0.3s;
-}
-
-.lang-btn:hover {
-  background: #00ffcc;
-  color: black;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0,255,0,0.05),
-    rgba(0,255,0,0.05) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  pointer-events: none;
-  opacity: 0.15;
-}
-
-header {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 60px;
-  color: #00ffcc;
-  text-shadow: 0 0 20px #00ffcc;
-}
-
-.section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-}
-
-.card {
-  background: #0a0a0a;
-  width: 300px;
-  border: 1px solid #00ffcc33;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #ff00ff66;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  opacity: 0.5;
-}
+body { margin: 0; background: black; color: #00ff99; font-family: Consolas, monospace; }
+.lang-btn { position: fixed; top: 20px; right: 30px; border: 1px solid #00ffcc; padding: 6px 14px; text-decoration: none; color: #00ffcc; transition: 0.3s; }
+.lang-btn:hover { background: #00ffcc; color: black; }
+body::after { content: ""; position: fixed; width: 100%; height: 100%; background: repeating-linear-gradient(to bottom, rgba(0,255,0,0.05), rgba(0,255,0,0.05) 1px, transparent 1px, transparent 3px); pointer-events: none; opacity: 0.15; }
+header { padding: 80px 80px; text-align: left; }
+header h1 { font-size: 60px; margin: 0; color: #00ffcc; text-shadow: 0 0 20px #00ffcc; }
+.typing { font-size: 18px; margin-top: 15px; border-right: 2px solid #00ffcc; white-space: nowrap; overflow: hidden; width: 0; animation: typing 3s steps(40,end) forwards, blink 1s infinite; }
+@keyframes typing { from { width: 0 } to { width: 380px } }
+@keyframes blink { 50% { border-color: transparent } }
+.section { padding: 80px 20px; max-width: 1100px; margin: auto; text-align: center; }
+.card-container { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+.card { background: #0a0a0a; width: 300px; border: 1px solid #00ffcc33; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+.card img { width: 100%; height: 170px; object-fit: cover; }
+.card-content { padding: 20px; }
+.card:hover { transform: scale(1.05); box-shadow: 0 0 25px #ff00ff66; }
+a { color: #00ffcc; text-decoration: none; }
+footer { text-align: center; padding: 40px; opacity: 0.5; }
 </style>
 </head>
 
 <body>
 
-<a href="index.html" class="lang-btn">Turkish</a>
-
 <header>
   <h1>DOSLabs</h1>
-  <p>> System Experiments Initializing...</p>
+  <div class="typing">
+    > System Experiments Starting...
+  </div>
+  <!-- Dil Butonu -->
+  <a href="index.html" class="lang-btn">Turkish</a>
 </header>
 
 <div class="section">
-  <h2>About</h2>
-  <p>Independent lab focused on retro hardware testing and system experiments.</p>
+  <h2>About Me</h2>
+  <p>
+    An independent tech lab working on retro hardware testing, OS modifications, and system boundary experiments.
+  </p>
 </div>
 
 <div class="section">
   <h2>Active Projects</h2>
 
   <div class="card-container">
+
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <img src="/images/sleeper.jpg" alt="Retro Hardware">
       <div class="card-content">
-        <h3>Windows Testing</h3>
-        <p>Hardware performance limit analysis.</p>
+        <h3>Retro Hardware</h3>
+        <p>Rebuilding old systems and performing performance tests.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1587202372775-9894b4b6d5f2">
+      <img src="/images/windowschat.jpg" alt="Windows Tests Live Stream">
       <div class="card-content">
-        <h3>Retro Hardware</h3>
-        <p>Rebuilding legacy systems.</p>
+        <h3>Windows Tests</h3>
+        <p>Live stream system checks and performance tests on Windows.</p>
       </div>
     </div>
+
   </div>
 </div>
 
+<div class="section">
+  <h2>Test Devices / Experiments</h2>
+  <div class="card-container">
+
+    <div class="card"><div class="card-content"><h3>Nokia Lumia 520</h3><p>Windows Phone 8.1</p></div></div>
+    <div class="card"><div class="card-content"><h3>Samsung Galaxy S5 klte</h3><p>Android 8.1, 10, 11</p></div></div>
+    <div class="card"><div class="card-content"><h3>Acer Nitro V15</h3><p>Windows 11 Core Single Language</p></div></div>
+    <div class="card"><div class="card-content"><h3>Dell Inspiron 6400</h3><p>Windows 10, XP, Vista Basic, 7, 8, CE 6.0</p></div></div>
+    <div class="card"><div class="card-content"><h3>Samsung Galaxy Tab 3 Lite T113</h3><p>Android 7.1.1, 8.1</p></div></div>
+    <div class="card"><div class="card-content"><h3>Lenovo S90-A</h3><p>Android 5.0.1</p></div></div>
+    <div class="card"><div class="card-content"><h3>Lenovo Y530</h3><p>Windows XP, Vista, 7, KDE Plasma</p></div></div>
+    <div class="card"><div class="card-content"><h3>Lenovo 3000 N500</h3><p>Windows Vista, 7, 8.1, 10, 11</p></div></div>
+    <div class="card"><div class="card-content"><h3>Samsung Galaxy S3 Mini I8200Q</h3><p>Android 4.4.4</p></div></div>
+    <div class="card"><div class="card-content"><h3>Redmi Note 8</h3><p>Android 11, 12, 14, 16</p></div></div>
+    <div class="card"><div class="card-content"><h3>ZTE Blade V30 Vita</h3><p>No ROM!</p></div></div>
+    <div class="card"><div class="card-content"><h3>Xiaomi MI A1</h3><p>Android 11, 12</p></div></div>
+    <div class="card"><div class="card-content"><h3>Samsung Galaxy S3</h3><p>Did not work :(</p></div></div>
+    <div class="card"><div class="card-content"><h3>Samsung Galaxy Grand Neo</h3><p>EMMC & screen faulty :(</p></div></div>
+
+  </div>
+</div>
+
+<div class="section">
+  <h2>Contact</h2>
+
+  <p>> Email:
+    <a href="mailto:lgklimalar1@gmail.com">lgklimalar1@gmail.com</a>
+  </p>
+
+  <p>> Email:
+    <a href="mailto:mcholmesnetwork@gmail.com">mcholmesnetwork@gmail.com</a>
+  </p>
+
+  <p>> Youtube:</p>
+
+  <p>
+    <a href="https://www.youtube.com/@dosdark-tr" target="_blank">
+      https://www.youtube.com/@dosdark-tr
+    </a>
+  </p>
+</div>
+
 <footer>
-© 2026 DOSLabs
+© 2026 DOSLabs | All Systems Operational
 </footer>
 
 </body>
 </html>
+
