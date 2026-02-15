@@ -1,60 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DOSLabs</title>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background: #0b0b0b;
+  background: #0a0a0a;
   color: #eaeaea;
   font-family: Consolas, monospace;
+}
+
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 50px;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+}
+
+header p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
   text-align: center;
 }
-.hero {
-  padding: 120px 20px;
+
+.section h2 {
+  color: #ff00ff;
+  margin-bottom: 20px;
 }
-h1 {
-  font-size: 60px;
-  color: #00ffff;
-  text-shadow: 0 0 25px #00ffff;
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-p {
-  font-size: 20px;
-  opacity: 0.8;
+
+.card {
+  background: #111;
+  padding: 25px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffff22;
+  transition: 0.3s;
 }
-.section {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff00ff55;
 }
-.btn {
-  margin-top: 30px;
+
+img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.button {
   display: inline-block;
-  padding: 12px 30px;
+  margin-top: 25px;
+  padding: 12px 25px;
   background: #ff00ff;
   color: white;
   text-decoration: none;
   border-radius: 6px;
   box-shadow: 0 0 15px #ff00ff;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #cc00cc;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  border-top: 1px solid #222;
+  opacity: 0.6;
 }
 </style>
 </head>
+
 <body>
 
-<div class="hero">
+<header>
   <h1>DOSLabs</h1>
-  <p>Retro Tech • System Experiments • Gaming</p>
-  <a class="btn" href="#">YouTube</a>
-</div>
+  <p>Retro Teknoloji • Sistem Deneyleri • Gaming</p>
+  <a class="button" href="#">YouTube Kanalım</a>
+</header>
 
 <div class="section">
-  <h2>About</h2>
+  <h2>Hakkımda</h2>
   <p>
-  Independent tech lab focused on retro hardware, operating system experiments
-  and creative system builds.
+    Eski donanımlar, işletim sistemi testleri ve sistem sınır denemeleri üzerine
+    çalışmalar yapan bağımsız bir teknoloji laboratuvarı.
+    Retro cihazları dönüştürmek ve performans sınırlarını zorlamak ana hedefim.
   </p>
 </div>
 
+<div class="section">
+  <h2>Projeler</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="">
+      <h3>Windows Deneyleri</h3>
+      <p>Farklı sistemlerde Windows testleri ve performans analizleri.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+      <h3>Retro Laptop Testleri</h3>
+      <p>Eski cihazların sınırlarını zorlayan donanım modifikasyonları.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+      <h3>Gaming & Sistem Modları</h3>
+      <p>Oyun performans testleri ve özel sistem kurulumları.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <h2>İletişim</h2>
+  <p>İş birlikleri ve projeler için iletişime geçebilirsiniz.</p>
+</div>
+
+<footer>
+  © 2026 DOSLabs
+</footer>
+
 </body>
 </html>
+
