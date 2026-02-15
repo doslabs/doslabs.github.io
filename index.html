@@ -49,7 +49,6 @@ body::after {
   opacity: 0.15;
 }
 
-/* HEADER SOLA */
 header {
   padding: 80px 80px;
   text-align: left;
@@ -62,7 +61,7 @@ header h1 {
   text-shadow: 0 0 20px #00ffcc;
 }
 
-/* Typing animasyon */
+/* Typing */
 .typing {
   font-size: 18px;
   margin-top: 15px;
@@ -70,13 +69,13 @@ header h1 {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typing 3s steps(40, end) forwards,
+  animation: typing 3s steps(40,end) forwards,
              blink 1s infinite;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 360px }
+  to { width: 380px }
 }
 
 @keyframes blink {
@@ -88,6 +87,11 @@ header h1 {
   max-width: 1100px;
   margin: auto;
   text-align: center;
+}
+
+.section h2 {
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
 }
 
 .card-container {
@@ -121,6 +125,15 @@ header h1 {
   box-shadow: 0 0 25px #ff00ff66;
 }
 
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 10px #00ffcc;
+}
+
 footer {
   text-align: center;
   padding: 40px;
@@ -142,7 +155,10 @@ footer {
 
 <div class="section">
   <h2>Hakkımda</h2>
-  <p>Retro donanım testleri ve sistem deneyleri üzerine bağımsız laboratuvar.</p>
+  <p>
+    Retro donanım testleri, işletim sistemi modifikasyonları ve sistem sınır deneyleri
+    üzerine çalışan bağımsız bir teknoloji laboratuvarı.
+  </p>
 </div>
 
 <div class="section">
@@ -151,29 +167,47 @@ footer {
   <div class="card-container">
 
     <div class="card">
-      <img src="https://picsum.photos/600/400?tech" alt="">
+      <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=60">
       <div class="card-content">
         <h3>Windows Testleri</h3>
-        <p>Donanım sınır performans analizleri.</p>
+        <p>Farklı donanımlarda sistem sınır performans analizleri.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://picsum.photos/600/400?computer" alt="">
+      <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=800&q=60">
       <div class="card-content">
         <h3>Retro Donanım</h3>
-        <p>Eski sistemlerin yeniden yapılandırılması.</p>
+        <p>Eski laptop ve masaüstü sistemlerin yeniden yapılandırılması.</p>
       </div>
     </div>
 
   </div>
 </div>
 
+<div class="section">
+  <h2>İletişim</h2>
+
+  <p>> Mail:
+    <a href="mailto:lgklimalar1@gmail.com">lgklimalar1@gmail.com</a>
+  </p>
+
+  <p>> Mail:
+    <a href="mailto:mcholmesnetwork@gmail.com">mcholmesnetwork@gmail.com</a>
+  </p>
+
+  <p>> Youtube:</p>
+
+  <p>
+    <a href="https://www.youtube.com/@dosdark-tr" target="_blank">
+      https://www.youtube.com/@dosdark-tr
+    </a>
+  </p>
+</div>
+
 <footer>
-© 2026 DOSLabs
+© 2026 DOSLabs | All Systems Operational
 </footer>
 
 </body>
 </html>
-
-
