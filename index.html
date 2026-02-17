@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakım Çalışması</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #0f172a;
-            color: #f1f5f9;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunucu Bakımda</title>
 
-        .container {
-            max-width: 500px;
-        }
+<style>
+    body {
+        margin: 0;
+        background: #0f172a;
+        color: #f1f5f9;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+    .box {
+        max-width: 600px;
+    }
 
-        p {
-            font-size: 18px;
-            color: #94a3b8;
-        }
+    h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
 
-        .status {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #64748b;
-        }
-    </style>
+    .time-range {
+        font-size: 18px;
+        color: #94a3b8;
+        margin-bottom: 25px;
+    }
+
+    .countdown {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #64748b;
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Sunucu Bakımda</h1>
-        <p>Şu anda sistem üzerinde bakım çalışması yapılmaktadır.</p>
-        <p>Lütfen daha sonra tekrar deneyiniz.</p>
-        <div class="status">
-            DOSLabs © 2016
-        </div>
+
+<div class="box">
+    <h1>🚧 Sunucu Bakımda</h1>
+
+    <div class="time-range">
+        Bakım Bitiş Süresi: <strong>16:11 - 18:30</strong>
     </div>
+
+    <div id="countdown" class="countdown"></div>
+
+    <div class="footer">
+        DOSLabs © 2026
+    </div>
+</div>
+
+<script>
+    // Bitiş saatini ayarla (BUGÜN için)
+    const endTime = new Date();
+    endTime.setHours(18, 30, 0); // 18:30:00
+
+    const countdownElement = document.getElementById("countdown");
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+
+        if (distance <= 0) {
+            countdownElement.innerHTML = "✅ Bakım tamamlandı!";
+            return;
+        }
+
+        const hours = Math.floor((distance / (1000 * 60 * 60)));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML =
+            hours + "s " + minutes + "dk " + seconds + "sn";
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
 </body>
 </html>
+
